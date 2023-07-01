@@ -1,0 +1,125 @@
+:root{
+    --clr_primary: hsl(215, 51%, 70%);
+    --clr_secondary:   hsl(178, 100%, 50%);
+
+    --cl_main :hsl(217, 54%, 11%);
+    --cr_card : hsl(216, 50%, 16%);
+    --cl_line : hsl(215, 32%, 27%);
+    --clwhite : hsl(0, 0%, 100%);
+
+--ff_secondary: 'Montserrat', sans-serif;
+--ff_primary: 'Outfit', sans-serif;
+}
+
+
+
+
+
+/* 1- Remove default marrin */
+* {
+   margin: 0; 
+}
+/* 2- Use a more intuitive Box-sizing model  */
+*, *::before, *::after{
+box-sizing: border-box;
+}
+/* 3- add accessible line-height */
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/* 4- Improve media defaults */
+img, picture, svg, video, canvas{
+    display: block;
+    max-width: 100%;
+}
+/* 5-avoid text overflows */
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+/* global styling */
+body{
+    font-family: var(--ff_primary);
+    color: var(--clr_primary);
+    background-color:#0d1a2d;
+    padding: 2rem;
+    font-weight: 200;
+    font-size:12px;
+   min-height: 100vh;
+display: grid;
+place-items: center;
+}
+main{
+  background-color: #15273f;  
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+@media (max-width: 600px) {
+    main{
+        height: 80%;
+    }
+
+}
+picture{
+    filter: grayscale();
+}
+img{
+  border-radius: .5rem;  
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+
+}
+.product{
+display: grid;
+gap: 10px;
+padding: 20px;
+}
+
+ h3{
+    color: var(--clwhite);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+
+}
+.date p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 5px;
+  
+}
+.date p img {
+   width: 12px;
+   height: 12px;  
+}
+footer {
+    border-block-start: 1px solid var(--cl_line) ;
+   padding-top: 10px;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+footer img{
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--clwhite);
+    border-radius: 50%;
+    margin-right: 10px;
+   
+}
+.para{
+    color: var(--clr_secondary);
+}
+footer p span{
+    color: var(--clwhite);
+}
+.para:hover , .user:hover, h3:hover{
+    color: var(--clr_secondary);
+}
